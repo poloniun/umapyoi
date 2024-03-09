@@ -141,48 +141,89 @@ public class SupportCardRegistry {
                     .addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 2))::build);
     
     public static final RegistryObject<SupportCard> SPEED_MASTER_CARD = SUPPORT_CARD.register("speed_master_card",
-            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.SPEED).maxDamage(5)
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 2))::build);
+            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.SPEED).maxDamage(50)
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))::build);
 
     public static final RegistryObject<SupportCard> STAMINA_MASTER_CARD = SUPPORT_CARD.register("stamina_master_card",
-            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.STAMINA).maxDamage(5)
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 2))::build);
+            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.STAMINA).maxDamage(50)
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+	.addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))::build);
 
     public static final RegistryObject<SupportCard> STRENGTH_MASTER_CARD = SUPPORT_CARD.register("strength_master_card",
-            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.STRENGTH).maxDamage(5)
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 2))
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))::build);
+            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.STRENGTH).maxDamage(50)
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))::build);
 
     public static final RegistryObject<SupportCard> GUTS_MASTER_CARD = SUPPORT_CARD.register("guts_master_card",
-            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.GUTS).maxDamage(5)
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 1))
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 2))
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))::build);
+            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.GUTS).maxDamage(50)
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))::build);
 
     public static final RegistryObject<SupportCard> WISDOM_MASTER_CARD = SUPPORT_CARD.register("wisdom_master_card",
-            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.WISDOM).maxDamage(5)
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 1))
-                    .addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+            SupportCard.Builder.create().ranking(GachaRanking.SSR).supportType(SupportType.WISDOM).maxDamage(50)
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                     ::build);
 
     public static final RegistryObject<SupportCard> SSR_KITASANBLACK = SUPPORT_CARD.register("ssr_kitasan_black",
                 SupportCard.Builder.create()
                 .ranking(GachaRanking.SSR)
                 .supportType(SupportType.SPEED)
-                .maxDamage(6)
+                .maxDamage(50)
                 .addSupporter(UmaDataRegistry.KITASAN_BLACK.getId())
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
                 .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                 ::build);
 
     public static final RegistryObject<SupportCard> SSR_SUPERCREEK = SUPPORT_CARD.register("ssr_super_creek",
                 SupportCard.Builder.create()
                 .ranking(GachaRanking.SSR)
                 .supportType(SupportType.STAMINA)
-                .maxDamage(5)
+                .maxDamage(50)
                 .addSupporter(new ResourceLocation(Umapyoi.MODID, "super_creek"))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+	.addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
                 .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
                 .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                 ::build);
@@ -190,23 +231,33 @@ public class SupportCardRegistry {
     public static final RegistryObject<SupportCard> SSR_OGURICAP = SUPPORT_CARD.register("ssr_oguri_cap",
                 SupportCard.Builder.create()
                 .ranking(GachaRanking.SSR)
-                .maxDamage(5)
+                .maxDamage(50)
                 .supportType(SupportType.STRENGTH)
                 .addSupporter(UmaDataRegistry.OGURI_CAP.getId())
-                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 1))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
-                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.NUTRITIONAL_SUPPLEMENTS.getId()))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                 ::build);
     
     public static final RegistryObject<SupportCard> SSR_KS_MIRACLE = SUPPORT_CARD.register("ssr_ks_miracle",
                 SupportCard.Builder.create()
                 .ranking(GachaRanking.SSR)
-                .maxDamage(5)
+                .maxDamage(50)
                 .supportType(SupportType.GUTS)
                 .addSupporter(new ResourceLocation(Umapyoi.MODID, "ks_miracle"))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
                 .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 2))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
                 .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                 ::build);
     
     public static final RegistryObject<SupportCard> SR_AGNUS_TACHYON = SUPPORT_CARD.register("sr_agnus_tachyon",
@@ -223,35 +274,54 @@ public class SupportCardRegistry {
     public static final RegistryObject<SupportCard> SSR_AGNUS_TACHYON = SUPPORT_CARD.register("ssr_agnus_tachyon",
                 SupportCard.Builder.create()
                 .ranking(GachaRanking.SSR)
-                .maxDamage(5)
+                .maxDamage(50)
                 .supportType(SupportType.SPEED)
                 .addSupporter(UmaDataRegistry.AGNUS_TACHYON.getId())
-                .addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 2))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
                 .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
-                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.ADV_LOWHEALTH_BUFF.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                 ::build);
+
     
     public static final RegistryObject<SupportCard> SSR_FINE_MOTION = SUPPORT_CARD.register("ssr_fine_motion",
                 SupportCard.Builder.create()
                 .ranking(GachaRanking.SSR)
-                .maxDamage(5)
+                .maxDamage(50)
                 .supportType(SupportType.WISDOM)
                 .addSupporter(new ResourceLocation(Umapyoi.MODID, "fine_motion"))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 1))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 2))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                 ::build);
-    
+	
+	
+	
     public static final RegistryObject<SupportCard> SSR_RUDOLF_G = SUPPORT_CARD.register("ssr_g_rudolf",
                 SupportCard.Builder.create()
                 .ranking(GachaRanking.SSR)
                 .maxDamage(6)
                 .supportType(SupportType.GUTS)
                 .addSupporter(UmaDataRegistry.SYMBOLI_RUDOLF.getId())
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
                 .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 2))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 1))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                 ::build);
+
     
     public static final RegistryObject<SupportCard> SSR_MEJIRO_RAMONU_W = SUPPORT_CARD.register("ssr_w_mejiro_ramonu",
                 SupportCard.Builder.create()
@@ -259,8 +329,15 @@ public class SupportCardRegistry {
                 .maxDamage(5)
                 .supportType(SupportType.WISDOM)
                 .addSupporter(new ResourceLocation(Umapyoi.MODID, "mejiro_ramonu"))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 4))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 2))
-                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 2))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.WISDOM_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.GUTS_SUPPORT.getId(), 3))
+	.addSupport(new SupportEntry(TrainingSupportRegistry.STRENGTH_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.SPEED_SUPPORT.getId(), 3))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.AP_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.HEART_AND_SOUL.getId()))
+                .addSupport(new SupportEntry(TrainingSupportRegistry.STAMINA_SUPPORT.getId(), 3))
+                .addSupport(UmaSkillUtils.getSkillSupportEnrty(UmaSkillRegistry.BIG_EATER.getId()))
                 ::build);
+
+
 }
