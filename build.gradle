@@ -125,8 +125,10 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 repositories {
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
+    maven { url = "https://gitee.com/polonium210/MMMaven/raw/main/repository" }
 
     maven { url = "https://raw.github.com/0999312/MMMaven/main/repository" }
+
     maven {
         url = "https://maven.theillusivec4.top/"
     }
