@@ -169,41 +169,44 @@ public class RetireRegisterMenu extends AbstractContainerMenu {
     }
 
     public List<UmaFactorStack> createResultFactors(ItemStack inputSoul, int ranking) {
-        @NotNull
-        Stream<UmaFactor> status = UmaFactorRegistry.REGISTRY.get().getValues().stream()
-                .filter(fac -> fac.getFactorType() == FactorType.STATUS);
-        long statusCount = UmaFactorRegistry.REGISTRY.get().getValues().stream()
-                .filter(fac -> fac.getFactorType() == FactorType.STATUS).count();
-        StatusFactor statusFactor = (StatusFactor) status.skip(rand.nextLong(statusCount)).findFirst()
-                .orElse(UmaFactorRegistry.SPEED_FACTOR.get());
-        var statusProperty = UmaSoulUtils.getProperty(inputSoul)[statusFactor.getStatusType().getId()];
-        var i = statusProperty > 19 ? 5 :
-                statusProperty > 10 ? 3 :
-                2;
-        var statusFactorStack = new UmaFactorStack(statusFactor,
-                rand.nextInt(i) + 1);
-
-        Stream<UmaFactor> extraStatus = UmaFactorRegistry.REGISTRY.get().getValues().stream()
-                .filter(fac -> fac.getFactorType() == FactorType.EXTRASTATUS);
-        long extraStatusCount = UmaFactorRegistry.REGISTRY.get().getValues().stream()
-                .filter(fac -> fac.getFactorType() == FactorType.EXTRASTATUS).count();
-        UmaFactor extraStatusFactor = extraStatus.skip(rand.nextLong(extraStatusCount)).findFirst()
-                .orElse(UmaFactorRegistry.PHYSIQUE_FACTOR.get());
-        var extraStatusFactorStack = new UmaFactorStack(extraStatusFactor, rand.nextInt(ranking > 18 ? 3 : 2) + 1);
+	@NotNull
 
         UmaFactorStack uniqueFactor = new UmaFactorStack(UmaFactorRegistry.UNIQUE_SKILL_FACTOR.get(), 1);
         uniqueFactor.getOrCreateTag().putString("skill", UmaSoulUtils.getSkills(inputSoul).get(0).getAsString());
 
-        List<UmaFactorStack> stackList = Lists.newArrayList(statusFactorStack, extraStatusFactorStack, uniqueFactor);
+        List<UmaFactorStack> stackList = Lists.newArrayList(uniqueFactor);
 
+        Stream<UmaFactor> status = UmaFactorRegistry.REGISTRY.get().getValues().stream()
+                .filter(fac -> fac.getFactorType() == FactorType.STATUS);
+        long statusCount = UmaFactorRegistry.REGISTRY.get().getValues().stream()
+                .filter(fac -> fac.getFactorType() == FactorType.STATUS).count();
+
+	status.forEach(fac->{   
+	var statusProperty = UmaSoulUtils.getProperty(inputSoul)[((StatusFactor)fac).getStatusType().getId()];
+    	var i = statusProperty > 18 ? 5 :
+            	statusProperty > 10 ? 3 : 1;
+	UmaFactorStack statusFactorStack = new UmaFactorStack(fac, i);
+	stackList.add(statusFactorStack);
+	});
+        Stream<UmaFactor> extraStatus = UmaFactorRegistry.REGISTRY.get().getValues().stream()
+                .filter(fac -> fac.getFactorType() == FactorType.EXTRASTATUS);
+        long extraStatusCount = UmaFactorRegistry.REGISTRY.get().getValues().stream()
+                .filter(fac -> fac.getFactorType() == FactorType.EXTRASTATUS).count();
+
+	extraStatus.forEach(fac->{   
+                 UmaFactorStack extraStatusFactorStack = new UmaFactorStack(fac, ranking > 18 ? 5 :
+	 ranking > 10 ? 3 : 1);
+	stackList.add(extraStatusFactorStack);
+	});
         createOtherFactors(inputSoul, ranking, stackList);
         createSkillFactors(inputSoul, ranking, stackList);
         return stackList;
     }
 
+
     public void createSkillFactors(ItemStack inputSoul, int ranking, List<UmaFactorStack> stackList) {
         UmaSoulUtils.getSkills(inputSoul).stream().skip(1).forEach(skillTag -> {
-            int skillLevel = this.rand.nextInt(ranking > 19 ? 6 : 4);
+            int skillLevel = ranking > 19 ? 5 : 3;
             if (skillLevel == 0)
                 return;
             UmaFactorStack skillFactor = new UmaFactorStack(UmaFactorRegistry.SKILL_FACTOR.get(), skillLevel);
@@ -217,7 +220,7 @@ public class RetireRegisterMenu extends AbstractContainerMenu {
         UmaFactorRegistry.REGISTRY.get().getValues().stream()
                 .filter(fac -> fac.getFactorType() == FactorType.OTHER && !(fac instanceof SkillFactor))
                 .forEach(fac -> {
-                    int skillLevel = this.rand.nextInt(ranking > 19 ? 6 : 4);
+                    int skillLevel = ranking > 19 ? 5 : 3;
                     if (skillLevel == 0)
                         return;
 
