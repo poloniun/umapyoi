@@ -1,25 +1,60 @@
 {
-  "supports": [
+"supports": [
+    {
+      "support": "umapyoi:wisdom_support",
+      "level": 3
+    },
     {
       "support": "umapyoi:guts_support",
       "level": 3
     },
-    {
-      "support": "umapyoi:speed_support",
-      "level": 2
+  {
+      "support": "umapyoi:strength_support",
+      "level": 3
     },
     {
+      "support": "umapyoi:speed_support",
+      "level": 3
+    },
+
+    {
+      "support": "umapyoi:stamina_support",
+      "level": 3
+    },
+	{
       "support": "umapyoi:skill_support",
       "level": 1,
       "tag": {
         "skill": "umapyoi:heart_and_soul"
+      }
+    },
+	{
+      "support": "umapyoi:skill_support",
+      "level": 1,
+      "tag": {
+        "skill": "umapyoi:adv_low_health_heal"
+      }
+    },
+	{
+      "support": "umapyoi:skill_support",
+      "level": 1,
+      "tag": {
+        "skill": "umapyoi:steel_will"
+      }
+    },
+
+    {
+      "support": "umapyoi:skill_support",
+      "level": 1,
+      "tag": {
+        "skill": "umapyoi:big_eater"
       }
     }
   ],
   "supporters": [
     "umapyoi:ks_miracle"
   ],
-  "max_damage": 5,
+  "max_damage": 100,
   "ranking": "ssr",
   "type": "guts"
 }
